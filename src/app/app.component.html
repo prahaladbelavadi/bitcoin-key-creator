@@ -2,11 +2,17 @@
 
   <div class="container jumbotron">
     <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-      <ngb-panel title="Key Pair">
+      <ngb-panel title="Key Pair : Address & Private key (WIF) ">
         <ng-template ngbPanelContent>
           <ul>
-            <li><label for="">Public key:</label>fekjdns</li>
-            <li><label for="">Private key:</label>fekjdns</li>
+            <li>
+              <label for="">Address : </label>
+              {{keypair.address}}
+            </li>
+            <li>
+              <label for="">Private key : </label>
+              {{keypair.private_key}}
+            </li>
           </ul>
         </ng-template>
       </ngb-panel>

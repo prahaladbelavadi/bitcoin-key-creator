@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { DataService } from "./data.service";
 
 @Component({
   selector: "app-root",
@@ -6,7 +7,14 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-  constructor() {}
+  keypair = {};
 
-  generate() {}
+  constructor(private dataSvc: DataService) {}
+
+  generate() {
+    this.dataSvc.newKeyPair().subscribe(keypair => {
+      console.log(keypair);
+      this.keypair = keypair;
+    });
+  }
 }
