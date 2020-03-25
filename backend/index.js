@@ -18,7 +18,7 @@ app.get("/new", (req, res) => {
 });
 
 app.get("/import", (req, res) => {
-  if (req.query.req) {
+  if (req.query.wif) {
     const wif = req.query.wif;
     const keyPair = bitcoin.ECPair.fromWIF(wif);
     const { address } = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey });
