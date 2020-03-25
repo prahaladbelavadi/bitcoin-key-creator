@@ -7,7 +7,7 @@ import { DataService } from "./data.service";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-  keypair = {};
+  keypair: any = {};
 
   constructor(private dataSvc: DataService) {}
 
